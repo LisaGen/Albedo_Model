@@ -10,23 +10,17 @@ import matplotlib.pyplot as plt
 import csv
 
 #Calculates the new albedo corrections for all the fills in the array
-#Plots a gaph of new_albedo vs fills for each channel
+#Generates a CSV to plot a gaph of the first term of the new_albedo vs fills for a given channel
 
 #Arguments
 # sys.argv[1] = channel number
-channel = str(int(sys.argv[1])) 
+channel = sys.argv[1]
 
 
-#fill_array = [8474, 8484, 8489, 8491, 8496, 8654, 8675, 8685, 8686, 8690, 8691, 8692, 8695, 8696, 8701, 8723, 8724, 8725, 8728, 8729, 8730, 8731, 8736, 8738, 8739]
-#fill_array = [8063, 8067, 8072, 8073, 8076, 8102, 8136, 8151, 8178, 8210, 8220, 8260, 8304, 8314, 8331, 8385, 8402, 8474, 8675, 8685, 8686, 8690, 8692, 8701, 8723, 8724, 8739, 8858, 8895, 9020, 9032, 9066, 9073]
-#fill_array = [8474, 8675, 8685, 8686, 8690, 8692, 8701, 8723, 8724, 8739]
-#fill_array = [8063, 8067, 8072, 8073, 8076, 8102, 8136, 8151, 8178, 8210, 8220, 8260, 8304, 8314, 8331, 8385, 8402, 8858, 8895, 9020, 9032, 9066, 9073] #8265,
-#fill_array = [8028,8030,8036,8773, 8782, 8817, 8822, 8873, 8895, 8896, 9031, 9036, 9042, 9057, 9063]
-#fill_array = [8822]
-fill_array=[8773, 8782, 8817, 8873, 8895, 8896, 9031, 9036, 9057, 9063]
+fill_array=[8773, 8782, 8817, 8873, 8895, 8896, 9031, 9036, 9057, 9063] #choose a set of fills
 
 
-eb_num = 1
+eb_num = 1 #first empty bunch (you can edit if you want subsequent albedo terms)
 
 new_albedo_array = []
 ratio_array_old = []
