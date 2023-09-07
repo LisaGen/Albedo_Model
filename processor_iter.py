@@ -16,20 +16,9 @@ import csv
 print ("Fill  " + sys.argv[1])
 #print ("Channel  " , str(sys.argv[2]))
 fill = int(sys.argv[1])
-#model = sys.argv[2]
-#channel = int(sys.argv[2])
 
-#if model == 'const_old':
-    #albedo_feb = 0.022410375592529844 #old albedo obtained by all 48 ch
-    #do_albedo_correction = True
-#elif model == 'no_alb':
-    #albedo_feb = 0.022410375592529844
-    #do_albedo_correction = False
-#elif model =='const_new':
-    #albedo_feb = 0.0027 #new albedo obtained by a filterd set of ch
-    #do_albedo_correction = True
-#else:
-    #print('Error')
+
+
 
 do_albedo_correction = True
 
