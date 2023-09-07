@@ -9,7 +9,8 @@ import glob
 import matplotlib.pyplot as plt
 import csv
 
-#
+#Proides relative rates (nth empty bunch/last full bunch)
+#It takes rates from data that are processed with the old albedo, so the new albedo is given by new_albedo = relative_rate + old_albedo
 #ARGUMENTS:
 # sys.argv[1] = fill number
 
@@ -32,9 +33,11 @@ else:
 #NEW CORRECTION
 
 eb_num =  3 #number of the empty bunch that you want to analyze (first, second, ...)
+#old albedo to add 
 old_alb_1 = 0.022410375592529844
 old_alb_2 = 0.0023920368925298427
 old_alb_3 = 0.0007854522325298428
+#if you want to upudate further albdo terms, pleas remeber to add the corresponding old albedo and change it when the new albedo is defined
 
 csv_file_path = '/localdata/lgeneros/data_fill_'+str(fill)+'_'+str(eb_num)+'.csv'
 
@@ -67,7 +70,7 @@ with open(csv_file_path, mode='a', newline='') as file:
 
             bxraw_reprocessed_tot_orig_channel = [sum(x) for x in zip(*bxraw_reprocessed)]
 
-        #SCANNING LAST TRAIN
+        #SCAN of the LAST TRAIN
 
         bcid = len(bxraw_reprocessed_tot_orig_channel) - 1
 
@@ -78,7 +81,7 @@ with open(csv_file_path, mode='a', newline='') as file:
                 bcid -= 1
         print('BCID: '+str(bcid))
         ratio = bxraw_reprocessed_tot_orig_channel[bcid+eb_num]/bxraw_reprocessed_tot_orig_channel[bcid]
-        new_alb = ratio + old_alb_3
+        new_alb = ratio + old_alb_+str(eb_num) 
     
         print("Ratios: "+ str(ratio))
         print("New Albedo: "+ str(new_alb))
