@@ -9,7 +9,7 @@ import glob
 import matplotlib.pyplot as plt
 import csv
 
-#Proides relative rates (nth empty bunch/last full bunch)
+#Provides relative rates (nth empty bunch/last full bunch)
 #It takes rates from data that are processed with the old albedo, so the new albedo is given by new_albedo = relative_rate + old_albedo
 #ARGUMENTS:
 # sys.argv[1] = fill number
