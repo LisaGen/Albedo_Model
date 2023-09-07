@@ -10,7 +10,8 @@ import matplotlib.pyplot as plt
 import csv
 
 #Provides relative rates (nth empty bunch/last full bunch)
-#It takes rates from data that are processed with the old albedo, so the new albedo is given by new_albedo = relative_rate + old_albedo
+#Takes rates from data that are processed with the old albedo, so the new albedo is given by new_albedo = relative_rate + old_albedo
+#Creates a CSV file
 #ARGUMENTS:
 # sys.argv[1] = fill number
 
