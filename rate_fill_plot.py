@@ -9,7 +9,7 @@ import glob
 import matplotlib.pyplot as plt
 
 
-#Plots a gaph of ratios vs fills for each channel
+#Plots a gaph of rates vs fills for a given channel
 
 #Arguments
 # sys.argv[1] = channel number
