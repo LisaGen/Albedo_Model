@@ -24,10 +24,6 @@ y = data[y_column]*100
 
 #PLOT
 fig = plt.figure()
-#fig.set_figheight(5.5)
-#plt.subplots_adjust(wspace=0, hspace=0)
-
-#custom_yticks = [-2.5,-2.0,-1.5,-1.0, -0.5, -0.25, 0, 0.25, 0.5, 1.0, 1.5, 2.0, 2.5]
 
 plt.title('Albedo Model')
 
