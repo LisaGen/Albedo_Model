@@ -9,7 +9,7 @@ import glob
 import matplotlib.pyplot as plt
 
 
-#Plots a gaph of ratios vs fills for each channel
+#Plots a gaph of frist term of new_albedo vs channels for all fills in the chosen set
 
 #Arguments
 # sys.argv[1] = channel number
