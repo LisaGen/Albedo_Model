@@ -9,6 +9,13 @@ import numpy as np
 
 import sys
 
+#Generates a PDF showing the fill profile detected by one single channel
+#ARGUMENTS
+# sys.argv[1] = True or False if you want data processed with/out albedo model
+# sys.argv[2] = channel
+# sys.argv[3] = fill
+# sys.argv[4] = new or old if you want data processed with new/old albedo model
+
 do_albedo_correction = sys.argv[1]
 channel = sys.argv[2]
 fillnum = sys.argv[3]
