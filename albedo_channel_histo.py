@@ -10,10 +10,11 @@ import matplotlib.pyplot as plt
 import math
 
 
-#Plots a gaph of ratios vs fills for each channel
+#Plots a gaph of the new correction vs fills for each channel
 
 #Arguments
 # sys.argv[1] = channel number
+
 fill_array = [8724,8739,8773,8782,8817,8858,8873,8895,8896,9031,9036,9057,9063,9066]
 
 channel_array = np.arange(48)
@@ -56,8 +57,7 @@ for fill in fill_array:
     #x_array_red = x_array
     print(x_array)
     print("Reduced "+ str(x_array_red))
-    #plt.hist(x_array, bins=15, range=[0,1.5], density=False, weights=None, cumulative=False, bottom=None, histtype='bar', align='mid', orientation='vertical', rwidth=None, log=False, color=colors[i], label='Fill '+str(fill), stacked=False, data=None)
-    #hist_values, bin_edges = np.histogram(x_array, bins='auto')
+
     hist_values, bin_edges = np.histogram(x_array_red, bins='auto')
     
     
