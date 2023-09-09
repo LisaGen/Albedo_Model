@@ -96,12 +96,12 @@ print("Y ARRAY *******" + str(all_ypoints))
 
 #  Plots 
 
-num_pages = 2
-graphs_per_page = 24
+num_pages = 4
+graphs_per_page = 12
 
 for page in range(num_pages):
     fig = plt.figure()
-    fig, ax = plt.subplots(4, 6)
+    fig, ax = plt.subplots(3, 4)
     plt.subplots_adjust(wspace=0, hspace=0)
     fig.suptitle('First empty bunch Ratio vs Train - '+str(fill_num), fontsize=16)
     
@@ -116,7 +116,7 @@ for page in range(num_pages):
         #Calculate the index of the current graph related to a channel
         channel = page * graphs_per_page + i
         
-        if channel >= 48:  # Stop if all graphs have been plotted
+        if channel >= 12:  # Stop if all graphs have been plotted
             break
 
         ax = fig.add_subplot(4, 6, i+1)
@@ -136,5 +136,5 @@ for page in range(num_pages):
         ax.set_xlabel('Train')
         ax.set_ylabel('%')
         ax.label_outer()
-    py.savefig('ratio_train_'+str(fill_num)+ '_pg'+str(page+1)+'_old.pdf')
+    py.savefig('rate_train_'+str(fill_num)+ '_pg'+str(page+1)+'.pdf')
 
