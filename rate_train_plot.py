@@ -15,8 +15,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 import sys
+
+#Generates plots for 12 channels containing relative rate vs train
+
 fill_num = sys.argv[1]
-eb_num =  int(sys.argv[2])#number of the empty bunch that you want to analyze (first, second, ...)
+eb_num =  int(sys.argv[2]) #number of the empty bunch that you want to analyze (first, second, ...)
 
 all_xpoints = []
 all_ypoints = []
