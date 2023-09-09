@@ -9,6 +9,8 @@ import glob
 import matplotlib.pyplot as plt
 import csv
 
+#Recalculates the first 4 entries of the albdo model for data fromn a given channel in a give fill
+
 #ARGUMENTS:
 # sys.argv[1] = fill number
 # sys.argv[2] = channel number
