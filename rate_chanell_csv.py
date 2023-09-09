@@ -9,7 +9,7 @@ import glob
 import matplotlib.pyplot as plt
 import csv
 
-
+#Produce CSV file with rates for each channel for a given fill
 #ARGUMENTS:
 # sys.argv[1] = fill number
 
