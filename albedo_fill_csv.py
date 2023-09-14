@@ -110,7 +110,7 @@ for fill in fill_array:
     new_rows.append(row)
     
     # CSV file path
-csv_file_path = '/localdata/lgeneros/data_ch_'+str(channel)+'_more2.csv'
+csv_file_path = '/localdata/lgeneros/data_ch_'+str(channel)+'.csv'
 
 # Append new rows to the CSV file
 with open(csv_file_path, mode='a', newline='') as file:
