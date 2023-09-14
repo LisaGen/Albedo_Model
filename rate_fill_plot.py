@@ -90,4 +90,4 @@ for xc, d in zip(xcoords,date):
 
 plt.legend(loc='upper right')
 
-plt.savefig('ratio_fill_channel_'+channel+'_new1.pdf')
+plt.savefig('ratio_fill_channel_'+channel+'_new.pdf')
